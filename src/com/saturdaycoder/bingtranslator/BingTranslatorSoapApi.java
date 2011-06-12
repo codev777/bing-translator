@@ -67,13 +67,7 @@ public class BingTranslatorSoapApi {
 	        	return ret;
 	        }
 	    } catch (Exception e) {
-	    	Debugger.error("error: " + e.toString());
-	    	Debugger.error("\r\n\r\n\r\n");
-	    	Debugger.debug("Soap request is: " + transport.requestDump);
-	    	Debugger.error("\r\n\r\n\r\n");
-	    	Debugger.debug("Soap response is: " + transport.responseDump);
-	    	Debugger.error("\r\n\r\n\r\n");
-	        return null;
+	    	return null;
 	    }
 	}
 	
@@ -110,13 +104,7 @@ public class BingTranslatorSoapApi {
 	        	return ret;
 	        }
 	    } catch (Exception e) {
-	    	Debugger.error("error: " + e.toString());
-	    	Debugger.error("\r\n\r\n\r\n");
-	    	Debugger.debug("Soap request is: " + transport.requestDump);
-	    	Debugger.error("\r\n\r\n\r\n");
-	    	Debugger.debug("Soap response is: " + transport.responseDump);
-	    	Debugger.error("\r\n\r\n\r\n");
-	        return null;
+	    	return null;
 	    }
 	}
 }
