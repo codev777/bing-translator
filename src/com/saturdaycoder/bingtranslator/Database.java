@@ -24,29 +24,40 @@ public class Database extends SQLiteOpenHelper {
 	}
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL("CREATE TABLE trans_langs (channel_id INTEGER primary key, "
-				+ " code TEXT DEFAULT '', "
-				+ " name TEXT DEFAULT '')");
-		db.execSQL("CREATE TABLE speak_langs (channel_id INTEGER primary key, "
-				+ " code TEXT DEFAULT '', "
-				+ " name TEXT DEFAULT '')");
+		db.execSQL("CREATE TABLE langs (channel_id code TEXT primary key, "
+				+ " can_translate BOOLEAN DEFAULT TRUE, "
+				+ " can_speak BOOLEAN DEFAULT TRUE)");
 	}
 	
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) 
 	{
-		db.execSQL("DROP TABLE IF EXISTS trans_langs");
-		db.execSQL("DROP TABLE IF EXISTS speak_langs");
+		db.execSQL("DROP TABLE IF EXISTS langs");
 		onCreate(db);
 	}
 	
-	public void setTransLang(Language lang) {
+	public void putLanguage(String code, Language.Attributes attributes) {
 		
 	}
 	
-	public void clearTransLang(Language lang) {
+	public void putLanguageName(String code, String locale, String name) {
+		
 	}
 	
-	public Language[] getTransLangs() {
+	public void removeLanguage(String code) {
+		
 	}
+	
+	public Language.Attributes getLanguage(String code) {
+		return null;
+	}
+	
+	public String getLanguageName(String code, String locale) {
+		return null;
+	}
+	
+	public void removeAllLanguages() {
+	}
+	
+
 }
