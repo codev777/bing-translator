@@ -1,14 +1,12 @@
 package com.saturdaycoder.bingtranslator;
 
+import java.util.HashMap;
+
 public class Language {
-	public String code;
-	public String getLocale() {
-		try {
-			return code.substring(0, 2);
-		} catch (Exception e) {
-			return code;
-		}
+	public class Attributes {
+		public boolean canTranslate;
+		public boolean canSpeak;
 	}
-	public String name;
-	
+	public HashMap<String, String> nameMap = new HashMap<String, String>();
+	public Attributes attributes = new Attributes();
 }
