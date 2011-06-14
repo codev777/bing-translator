@@ -48,7 +48,11 @@ public class Database extends SQLiteOpenHelper {
 		
 	}
 	
-	public Language.Attributes getLanguage(String code) {
+	public Language.Attributes getLanguageAttributes(String code) {
+		return null;
+	}
+	
+	public Language[] getLanguages() {
 		return null;
 	}
 	
@@ -59,5 +63,12 @@ public class Database extends SQLiteOpenHelper {
 	public void removeAllLanguages() {
 	}
 	
-
+	public void setLanguageName(String code, String locale, String name) {
+		
+	}
+	
+	public boolean hasLocaleNames(String locale) {
+		return false;
+	}
+	
 }

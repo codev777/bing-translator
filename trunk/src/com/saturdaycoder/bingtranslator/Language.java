@@ -7,6 +7,11 @@ public class Language {
 		public boolean canTranslate;
 		public boolean canSpeak;
 	}
-	public HashMap<String, String> nameMap = new HashMap<String, String>();
-	public Attributes attributes = new Attributes();
+	public String code;
+	public Attributes attributes;
+	//public HashMap<String, String> nameMap = new HashMap<String, String>();
+	//public Attributes attributes = new Attributes();
+	//public Language(String code) {
+	//	this.code = code;
+	//}
 }
