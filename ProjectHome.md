@@ -1,0 +1,1 @@
+An Bing translator on Android devices
